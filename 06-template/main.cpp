@@ -7,6 +7,7 @@
 #include "rectangle.hpp"
 #include "circle.hpp"
 
+
 int main(int argc, char **argv){
    window w( 128, 64, 2 );
    

@@ -15,7 +15,7 @@ struct line {
 };
 
 int main(int argc, char **argv){
-   line diagonal_line = { 10, 10, 40, 40 };
-   diagonal_line.print();
+   line dia = { 10, 10, 40, 40 };
+   dia.print();
    return 0;
 }
