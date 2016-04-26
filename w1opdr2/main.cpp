@@ -11,9 +11,11 @@
 
 
  int main (int argc, char **argv){
-     window w( 128, 100, 4 );
-    figure hallo(w,10,10,80,80,1);
-    hallo.print();
+     window w( 400, 300, 4 );
+     
+    figure hallo(w,10,10,80,80,2);
+    hallo.count();
+    
 
      
      

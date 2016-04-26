@@ -2,25 +2,56 @@
 #define FIGURE_HPP
 
 #include "window.hpp"
-#include "line.hpp"
+
 #include "rectangle.hpp"
 #include "circle.hpp"
 
 
 
+#include "figure.hpp"
+
 class figure {
+    
+    
+    
 private:
-  line n;
-   rectangle rec;
-   circle a,b;
-   
+
+   int beginx;
+   int beginy; 
+   int endx;
+   int endy;
+   int number_n;
+   window & w;
+
    
 public:
-   figure( window & w, int beginx ,int beginy, int endx, int endy, int number_n );
-
-
-
+  figure( window & w, int beginx ,int beginy, int endx, int endy, int number_n):
+      beginx( beginx ),
+      beginy( beginy ),
+      endx( endx ),
+      endy(endy),
+      number_n(number_n),
+      w(w)
+      {}
+      
+     
    void print();
+      
+     
+   void count(); 
+   
+ 
+
+
+
+   
+  
+  
+   
+   
+
+   
+   
 };
 
 #endif // FIGURE_HPP
