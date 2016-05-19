@@ -41,7 +41,9 @@ public:
    /// with just a whole value.
    rational( int counter, int denominator = 1 ):
      counter( counter ), denominator( denominator )
-   {}
+   {
+       reduce();
+       }
    
    /// compare two rational values
    //
@@ -49,7 +51,8 @@ public:
    /// if and only if the counter and denminator of both
    /// operands are equal.
    bool operator==( const rational & rhs ) const {
-      return ( counter == rhs.counter ) || ( denominator == rhs.denominator );
+      return ( counter == rhs.counter ) && ( denominator == rhs.denominator );
+      
    }
 
    /// output operator for a rational value
@@ -63,14 +66,14 @@ public:
          << rhs.counter 
          << "/" 
          << rhs.denominator
-         << "}";
+         << "]";
    }   
    
    /// multiply a rational by an integer
    //
    /// This operator* multiplies a rational value by an integer value.
    rational operator*( const int rhs ) const {
-      return rational( counter * rhs, denominator * rhs );
+      return rational( counter * rhs, denominator );
    }
    
    /// multiply a rational by a rational
@@ -78,9 +81,9 @@ public:
    /// This operator* multiplies a rational value by a rational value.
    rational operator*( const rational & rhs ) const {
       return rational( 
-         denominator * rhs.denominator,
-         counter * rhs.counter
-      );
+         counter * rhs.counter,
+        denominator * rhs.denominator
+                            );
    }
    
    /// add a rational to another rational
@@ -92,12 +95,15 @@ public:
       reduce();
       return *this;
    }
-   
+    ///add the solution  from rational multiply rational into rational 
+    //
+    ///the *= operator adds a multiply from two rationals 
+    
    rational operator*=( const rational & rhs ){
-      counter = counter + rhs.counter;
-      denominator += rhs.denominator;
+      counter = counter * rhs.counter;
+      denominator *= rhs.denominator;
       reduce();
-      return rhs;
+      return rational(counter,denominator);
    }
    
 };

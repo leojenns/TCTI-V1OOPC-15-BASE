@@ -35,10 +35,10 @@ public:
       {}
       
      
-   void print();
+  
       
      
-   void count(); 
+   void print(); 
    
  
 

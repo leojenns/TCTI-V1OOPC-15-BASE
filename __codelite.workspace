@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="example code" Database="">
   <Project Name="05-01-xyxy" Path="05-01-xyxy/_codelite.project" Active="No"/>
-  <BuildMatrix>
-    <WorkspaceConfiguration Name="Release" Selected="yes">
-      <Project Name="05-01-xyxy" ConfigName="Release"/>
-    </WorkspaceConfiguration>
-  </BuildMatrix>
   <Project Name="05-02-struct" Path="05-02-struct/_codelite.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
@@ -324,10 +319,24 @@
       <Project Name="w1opdr1" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
-  <Project Name="w1opdr2" Path="w1opdr2/_codelite.project" Active="Yes"/>
+  <Project Name="w1opdr2" Path="w1opdr2/_codelite.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="w1opdr2" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="w2opdr3" Path="w2opdr3/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="w2opdr3" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="_codelite" Path="18-01-blink/_codelite.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="05-01-xyxy" ConfigName="Release"/>
+      <Project Name="18-01-blink" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
