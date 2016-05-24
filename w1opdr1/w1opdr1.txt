@@ -1,1 +1,0 @@
-./Debug/main.cpp.o ./Debug/filled_regtangle.cpp.o ./Debug/window.cpp.o   

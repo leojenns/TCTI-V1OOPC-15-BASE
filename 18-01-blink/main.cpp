@@ -12,10 +12,10 @@
 int main( void ){	
    // kill the watchdog
    WDT->WDT_MR = WDT_MR_WDDIS;
-   
-   auto led = hwlib::target::pin_out( hwlib::target::pins::led );
+
+   auto led = hwlib::target::pin_out( 1,27);
    while(1){
-      led.set( 1 );
+      led.set( 1);
       hwlib::wait_ms( 200 );
       led.set( 0 );
       hwlib::wait_ms( 200 );      

@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ 05-01-xyxy -  ]----------"
-	@cd "05-01-xyxy" && "$(MAKE)" -f  "05-01-xyxy.mk"
+	@echo "----------Building project:[ week3opdr1,2 -  ]----------"
+	@cd "week3opdr2" && "$(MAKE)" -f  "week3opdr1,2.mk"
 clean:
-	@echo "----------Cleaning project:[ 05-01-xyxy -  ]----------"
-	@cd "05-01-xyxy" && "$(MAKE)" -f  "05-01-xyxy.mk" clean
+	@echo "----------Cleaning project:[ week3opdr1,2 -  ]----------"
+	@cd "week3opdr2" && "$(MAKE)" -f  "week3opdr1,2.mk" clean
