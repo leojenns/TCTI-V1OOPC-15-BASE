@@ -8,31 +8,18 @@
 #include "vector.hpp"
 #include "line.hpp"
 #include "rectangle.hpp"
-class wall :public rectangle{
+class wall :public drawable{
 
 protected :
     bool filled = 0;
     int update_interval;
     int update_count=1;
-    line top;
- line top1;
-  line top2;
-  line top3;
- line right; 
-   line right1;
-  line right2;
- line right3;
- line bottom;
- line bottom1;
- line bottom2;
- line bottom3;
- line left;
-    line left1;
-  line left2;
-  line left3;
+    rectangle rec;
+
+
 
 public :
-wall(window & w, const vector & start, const vector & end , int update_int);
+wall(window & w, const vector & start, const vector & end , int update_int,const vector &stuiter);
 
 
 

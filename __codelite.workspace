@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="example code" Database="">
   <Project Name="05-01-xyxy" Path="05-01-xyxy/_codelite.project" Active="No"/>
-  <BuildMatrix>
-    <WorkspaceConfiguration Name="Release" Selected="yes">
-      <Project Name="05-01-xyxy" ConfigName="Release"/>
-    </WorkspaceConfiguration>
-  </BuildMatrix>
   <Project Name="05-02-struct" Path="05-02-struct/_codelite.project" Active="No"/>
-  <BuildMatrix>
-    <WorkspaceConfiguration Name="Release" Selected="yes">
-      <Project Name="05-02-struct" ConfigName="Release"/>
-    </WorkspaceConfiguration>
-  </BuildMatrix>
   <Project Name="05-03-print" Path="05-03-print/_codelite.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
@@ -474,13 +464,19 @@
       <Project Name="week3opdr13" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
-  <Project Name="week3opdr1,2" Path="week3opdr2/_codelite.project" Active="Yes"/>
+  <Project Name="week3opdr2" Path="week3opdr2/_codelite.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="week3opdr2" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
-  <Project Name="week4opdr2" Path="week4opdr2/_codelite.project" Active="No"/>
+  <Project Name="week3opdr3" Path="week3opdr3/_codelite.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="week3opdr3" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="week4opdr3" Path="week4opdr2/_codelite.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="week4opdr2" ConfigName="Release"/>
@@ -496,6 +492,22 @@
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="week4opr1" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="week4opdr2" Path="week4opdr2/week4opdr2.project"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="05-01-xyxy" ConfigName="Release"/>
+      <Project Name="week4opdr2" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+  <Project Name="week4opdr4" Path="week4opdr4/week4opdr4.project"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="05-02-struct" ConfigName="Release"/>
+      <Project Name="week4opdr4" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

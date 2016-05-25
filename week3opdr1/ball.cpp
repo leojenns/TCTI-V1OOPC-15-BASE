@@ -10,11 +10,12 @@ ball::ball( window & w, const vector & midpoint, int radius, const vector & spee
    speed( speed )
 {}
 
-void ball::interact( drawable & other ){
+void ball::interact( drawable & other,drawable * objects[] ){
    if( this != & other){
       if( overlaps( other )){
-         speed.x *= -1;
+        speed.x *= -1;
          speed.y *= -1;
       }
+   
    }
 }

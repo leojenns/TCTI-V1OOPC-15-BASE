@@ -14,14 +14,12 @@ protected :
     bool filled = 0;
     int update_interval;
     int update_count=1;
-    rectangle top;
-  rectangle top1;
-  rectangle  top2;
-  rectangle top3;
+    rectangle rec;
+
 
 
 public :
-wall(window & w, const vector & start, const vector & end , int update_int);
+wall(window & w, const vector & start, const vector & end , int update_int,const vector & stuiter);
 
 
 

@@ -10,13 +10,12 @@ protected:
    window w;
    vector location;
    vector size;
-  
 public:
    drawable( window & w, const vector & location, const vector & size );   
    bool overlaps( const drawable & other );
    virtual void draw() = 0;
    virtual void update(){}
-   virtual void interact( drawable & other ){}
+   virtual void interact( drawable & other, drawable * objects[]  ){}
    
    std::ostream & print( std::ostream & out ) const;
 };
