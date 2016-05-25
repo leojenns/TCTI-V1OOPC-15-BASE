@@ -1,0 +1,92 @@
+1ste wijziging 
+: rational.hpp
+
+rational( int counter, int denominator = 1 ):
+     counter( counter ), denominator( denominator )
+   {}
+   
+   
+  --------- moet worden ( reduce (); toevoegen binnen de accolades )----------
+   
+    rational( int counter, int denominator = 1 ):
+     counter( counter ), denominator( denominator )
+   {
+       reduce();
+       }
+	   
+	   
+	   
+2de wijzigingen-----------------------------------------------------------------
+:rational.hpp
+
+ friend std::ostream & operator<<( std::ostream & lhs, const rational & rhs ){
+      return lhs 
+         << "[" 
+         << rhs.counter 
+         << "/" 
+         << rhs.denominator
+         << "}";
+   }   
+   
+   
+   ------------moet worden ( accolade vervangen door blok haakje )--------------
+   
+    friend std::ostream & operator<<( std::ostream & lhs, const rational & rhs ){
+      return lhs 
+         << "[" 
+         << rhs.counter 
+         << "/" 
+         << rhs.denominator
+         << "]";
+   }   
+   
+   
+3de wijziging -------------------------------------------------------------
+:rational.hpp
+
+rational operator*( const int rhs ) const {
+      return rational( counter * rhs, denominator );
+   }
+   
+   
+   ------------moet denominator moet niet maal rhs worden gedaan---------------------
+   
+ rational operator*( const int rhs ) const {
+      return rational( counter * rhs, denominator * rhs );
+   }
+   
+   
+ 4de wijziging ----------------------------------------------------------------
+ :rational.hpp
+  
+  rational operator*( const rational & rhs ) const {
+      return rational( 
+         denominator * rhs.denominator,
+         counter * rhs.counter
+      );
+   }
+    -----------moet in de return counter en denominator omdraaien--------------
+ rational operator*( const rational & rhs ) const {
+      return rational( 
+         counter * rhs.counter,
+        denominator * rhs.denominator
+                            );
+   }
+   5de wijziging ------------------------------------------------------------------
+   :rational.hpp
+    rational operator*=( const rational & rhs ){
+      counter = counter + rhs.counter;
+      denominator += rhs.denominator;
+      reduce();
+      return rhs;
+   }
+   
+   ------------           += moet worden *=  -------------------------------------
+    rational operator*=( const rational & rhs ){
+      counter = counter * rhs.counter;
+      denominator *= rhs.denominator;
+      reduce();
+      return rational(counter,denominator);
+   }
+   
+   

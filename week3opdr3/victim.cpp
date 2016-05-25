@@ -3,7 +3,7 @@
 
 victim::victim(window & w, vector start,  vector  end ):
 drawable(w,start,end-start),
-harry(w,vector(start.x+1,start.y+1),vector(end.x-1,end.y-1),update_count),
+harry(w,vector(start.x,start.y),vector(end.x,end.y),update_count),
 end(end),start(start)
 
 {}

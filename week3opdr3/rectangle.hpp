@@ -24,7 +24,7 @@ public:
    void draw() override;
    void draw_full();
    void draw_kill();
- int kill;
+    int kill;
 };
 
 
