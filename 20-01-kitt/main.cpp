@@ -13,6 +13,7 @@ int main( void ){
       ds, 
       hwlib::pin_in_dummy 
    );
+
    auto leds = hwlib::hc595( spi, shcp );
    
    hwlib::kitt( leds );

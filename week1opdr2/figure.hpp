@@ -12,8 +12,6 @@
 
 class figure {
     
-    
-    
 private:
 
    int beginx;
@@ -33,24 +31,11 @@ public:
       number_n(number_n),
       w(w)
       {}
-      
-     
-  
-      
+   
      
    void print(); 
    
- 
 
-
-
-   
-  
-  
-   
-   
-
-   
    
 };
 

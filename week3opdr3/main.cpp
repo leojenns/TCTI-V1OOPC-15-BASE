@@ -4,7 +4,7 @@
 #include "wall.hpp"
 #include "victim.hpp"
 int main(){
-   window w( vector( 128, 64 ),1 );
+   window w( vector( 128, 64 ),2 );
     
   wall top (w, vector (0,0), vector(127,4),2,vector(1,-1));
   wall left(w,vector(0,0),vector(4,127),2,vector(-1,1));
