@@ -1,36 +1,34 @@
 
 #include "hwlib.hpp"
 
-class pin_out_four: public hwlib::pin_out {
+class pin_out_4: public hwlib::pin_out {
 private:
-   hwlib::pin_out * list[ 4 ];     
+   hwlib::pin_out * group[ 4 ];     
    
 public:
 
-   pin_out_four( 
-      hwlib::pin_out & p0, 
-      hwlib::pin_out & p1 = hwlib::pin_out_dummy,  
-      hwlib::pin_out & p2 = hwlib::pin_out_dummy, 
-      hwlib::pin_out & p3 = hwlib::pin_out_dummy 
+   pin_out_4( 
+      hwlib::pin_out & pin0, hwlib::pin_out & pin1 = hwlib::pin_out_dummy,  
+      hwlib::pin_out & pin2 = hwlib::pin_out_dummy, hwlib::pin_out & pin3 = hwlib::pin_out_dummy 
    ):
-      list{ &p0, &p1, &p2, &p3 }
+      group{ &pin0, &pin1, &pin2, &pin3 }
    {}
    
    void set( bool x ) override{
-      for( auto pin  : list ){
+      for( auto pin  : group ){
           pin->set( x );
-      }
-   }
+                                        }
+}
 };
 
 class pin_out_invert{
 private:
-	pin_out_four left;
-	pin_out_four right;
+	pin_out_4 left;
+	pin_out_4 right;
 public:
-	pin_out_invert(hwlib::pin_out & p0, hwlib::pin_out & p1, hwlib::pin_out & p2, hwlib::pin_out & p3, hwlib::pin_out & p4, hwlib::pin_out & p5, hwlib::pin_out & p6, hwlib::pin_out & p7):
-	left(p0, p1, p2, p3),
-	right(p4, p5, p6, p7)
+	pin_out_invert(hwlib::pin_out & pin0, hwlib::pin_out & pin1, hwlib::pin_out & pin2, hwlib::pin_out & pin3, hwlib::pin_out & pin4, hwlib::pin_out & pin5, hwlib::pin_out & pin6, hwlib::pin_out & pin7):
+	left(pin0, pin1, pin2, pin3),
+	right(pin4, pin5, pin6, pin7)
 	{}
 	
 	void kitt(){
